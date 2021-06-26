@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>lorem</h1>
+    <p class="target">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta ea ipsa in corporis voluptatibus
+        sed fugit repellendus dolorem similique eveniet, nihil quos itaque soluta saepe libero ratione molestias unde?
+    </p>
+    <div class="target">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/aa/Bart_Simpson_200px.png/170px-Bart_Simpson_200px.png"
+            alt="" id="pic">
+
+    </div>
+    <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cum ea tempora aspernatur ducimus
+        accusamus quo tenetur? Impedit, aliquid blanditiis inventore praesentium odio laudantium dolores perspiciatis,
+        fugit, repellat id alias.</p>
+
+
+
+
+
+
+    <!-- <script src="Dz.js"></script> -->
+
+    <script>
+
+        let img = document.getElementById('pic');
+        console.log(img);
+        img.alt = 'bart'
+        img.src = 'http://pazitiff.info/uploads/posts/2008-09/1222184295_simp2006_homerarmscrossed_f.jpg';
+
+        let liCollection = document.getElementsByTagName('li');
+        console.log(liCollection);
+
+        for (const li of liCollection) {
+            console.log(li);
+            li.style.background = 'silver';
+            li.style.height = '40px';
+            li.innerHTML = <strong>"poipoipoi"</strong>;
+        }
+
+        let targetList = document.getElementsByClassName('target');
+        console.log(targetList);
+
+        for (const target of targetList) {
+            target.innerText = 'tyuijhgvb';
+            console.log(target.classList);
+            // target.classList.add('xxx');
+            // target.classList.remove('xxx');
+            // target.classList.toggle('xxx');
+        }
+
+        let target1 = targetList[0];
+        console.log(target1);
+        console.log(target1.nextElementSibling);
+        console.log(document.body.children);
+        console.log(document.body.childNodes);
+
+
+    </script>
+</body>
+
+</html>

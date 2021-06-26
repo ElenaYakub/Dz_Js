@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="header"></h1>
+    <form id='f1' action="index3.html">
+        <input type="text" name="name">
+        <input type="text" name="surname">
+        <button>save</button>
+    </form>
+
+    <script>
+
+        // let users = [];
+
+        let f1 = document.forms.f1;
+        let nameInput = f1.name;
+        let surnameInput = f1.surname;
+
+        f1.addEventListener('submit', (event) => {
+            // event.preventDefault();
+            let name = nameInput.value;
+            let surname = surnameInput.value;
+            let user = {
+                name: name,
+                surname: surname
+            };
+            let jsonUser = JSON.stringify(user);
+
+            localStorage.setItem('user', jsonUser);
+            // users.push(user);
+            // console.log(users);
+
+        });
+
+
+
+        // f1.addEventListener('submit', (e) => {    //заменяет два события ниже, как список событий где все выполнимы
+        //     e.preventDefault();
+        //     console.log('action1');
+        // });
+        // f1.addEventListener('submit', (e) => {
+        //     console.log('action2');
+        // });
+
+        // f1.onsubmit = function (e) {
+        //     e.preventDefault();  //запретить дефолтное действие после нажатия button, здесь это перезагрузку текста заголовка.
+        //     console.log('action1');
+        // };
+        // f1.onsubmit = function (e) {
+        //     e.preventDefault();
+        //     console.log('action2'); //второе событие
+        // };
+
+        // let nameInput = f1.name;
+        // nameInput.oninput = function (e) {
+        //     // console.log(e.target.value);
+        //     document.getElementById('header').innerText = e.target.value;
+        // };
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
